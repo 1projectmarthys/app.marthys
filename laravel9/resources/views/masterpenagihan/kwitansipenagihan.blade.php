@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ $nomorDokumen2 }}</title>
+    <style>
+        @media print {
+            @page {
+                size: 210mm 297mm portrait;
+                margin-top: 5mm;
+                margin-left: 0mm;
+                margin-bottom: 0mm;
+                margin-right: 1mm;
+            }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: left;
+        }
+        .header img {
+            width: 150px;
+            height: 55px;
+            margin-top: 10px;
+        }
+        .header .company-info {
+            text-align: left;
+        }
+        .header .company-info p {
+            margin: 0;
+        }
+        .strip {
+            background: repeating-linear-gradient(
+                45deg,
+                #ffead4,
+                #ffead4 10px,
+                #ffd3a6 10px,
+                #ffd3a6 20px
+            );
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header" style="margin-top:10px">
+            <table style="width:100%;border-collapse: collapse;">
+                <tr>
+                    <td style="width:15%;border-bottom:1px solid; ">
+                        <img style="margin-top:-1px;" alt="Company Logo" height="100%" src="{{ asset('image/logo.jpg') }}" width="100%" />
+                    </td>
+                    <td width="60%;" style="border-bottom:1px solid">
+                        <strong>PT Marthys Orthopaedic Indonesia</strong><br>
+                        Jl. Indrokilo Km 4.2 Bulukandang, Kecamatan Prigen,<br>
+                        Kabupaten Pasuruan, Jawa Timur, Indonesia 67157<br>
+                        Telp. 0343-6749282 | +6281 3218 0674<br>
+                    </td>
+                    <td width="20%" style="text-align:center; vertical-align:middle;border:1px solid">
+                        <strong style="font-size:30px;">KWITANSI</strong><br>
+                        {{ $nomorDokumen2 }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br>
+        <table style="width:100%">
+            <tr>
+                <td style="width:25%;border-bottom:1px solid">
+                    <strong>Telah Diterima Dari </strong>
+                </td>
+                <td style="width:75%;border-bottom:1px dashed">
+                    : {{ $masterPenagihan->nama_customer }}
+                </td>
+            </tr>
+            <tr>
+                <td style="font-style:italic">
+                    Received From
+                </td>
+            </tr>
+            <tr style="height:10px">
+                <td></td>
+            </tr>
+
+            <tr>
+                <td style="width:25%;border-bottom:1px solid">
+                    <strong>Sejumlah Uang </strong>
+                </td>
+                <td rowspan="2" class="strip" style="width:75%;border-bottom:1px dashed;border-top:1px dashed;background-color:#f2f2f2;font-style:italic;font-weight:bold">
+                    : {{ $terbilangText }} Rupiah
+                </td>
+            </tr>
+            <tr>
+                <td style="font-style:italic">
+                    Amount Received
+                </td>
+            </tr>
+            <tr style="height:10px">
+                <td></td>
+            </tr>
+
+            <tr>
+                <td style="width:25%;border-bottom:1px solid">
+                    <strong>Untuk Pembayaran </strong>
+                </td>
+                <td style="width:75%;border-bottom:1px dashed">
+                    : Pelunasan untuk tagihan Nomor {{ $nomorDokumen }}
+                </td>
+            </tr>
+            <tr>
+                <td style="font-style:italic">
+                    In Payment of
+                </td>
+                <td style="width:75%;border-bottom:1px dashed">
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <table style="height:50px;float:left;margin-right:20px;width:50%">
+            <tr>
+                <td style="background-color:#ffead4; padding-right:20px;padding-left:20px;width:20%;border-top:1px dashed;border-bottom:1px dashed;border-right:3px solid">
+                    <strong>Jumlah Rp.</strong>
+                </td>
+                <td class="strip" style="padding-left:10px;width:30%;border-top:1px dashed;border-bottom:1px dashed">
+                    <strong style="font-size:30px">{{ $formatRupiah }}</strong>
+                </td>
+            </tr>
+        </table>
+
+        <br><br>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:70%; vertical-align:top">
+                    <strong>Pembayaran Di Transfer Ke :</strong><br>
+                    Bank BCA KCP Dharmahusada, Surabaya<br>
+                    A/N PT. Marthys Orthopaedic Indonesia<br>
+                    A/C 3880-358-005
+                </td>
+                <td width="30%">
+                    Pasuruan, {{ $tanggalIndo }}
+                    <br><br><br><br><br><br><br><br>
+                    Sherren Cynthia Immelda<br>
+                    (Accounting)
+                </td>
+            </tr>
+        </table>
+        <br>
+    </div>
+
+    <script>
+        window.print();
+    </script>
+</body>
+</html>

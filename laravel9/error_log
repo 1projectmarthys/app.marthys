@@ -1,0 +1,1 @@
+[20-Jun-2025 01:59:11 UTC] PHP Fatal error:  Cannot declare class App\Console\Commands\GenerateDocumentNumbers, because the name is already in use in /home/marthys1/apps.marthysorthopaedic.com/laravel9/app/Console/Commands/GeneratePengajuanNumbers.php on line 8

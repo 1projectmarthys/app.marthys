@@ -1,0 +1,19 @@
+:root {
+    --tw-color-primary: #3b82f6 !important; 
+}
+
+/* Contoh untuk tombol */
+button {
+    background-color: var(--primary-color);
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+button:focus {
+    background-color: var(--primary-color-focus);
+}
+body {
+    @apply scale-75 origin-top-left;
+  }
