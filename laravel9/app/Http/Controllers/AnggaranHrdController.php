@@ -40,7 +40,7 @@ class AnggaranHrdController extends Controller
         }
 
 
-        $anggaranhrd = $query->orderBy('id', 'desc')->paginate(10);
+        $anggaranhrd = $query->orderBy('id', 'desc')->paginate(10)->withQueryString();
         return view('anggaranhrd.index', compact('anggaranhrd'));
     }
 

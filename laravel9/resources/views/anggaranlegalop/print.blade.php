@@ -5,8 +5,7 @@
     <title>Cetak Pengajuan Pembayaran</title>
     <style>
         @media print {
-            @page { size: A4 landscape; margin: 8mm; }
-            body { margin: 0; }
+            
         }
         body { font-family: Arial, sans-serif; margin: 20px; font-size: 11pt; color: #000; }
         table { border-collapse: collapse; }
@@ -54,7 +53,7 @@
             <img src="{{ asset('image/logo.jpg') }}" alt="marthys">
         </div>
         <div class="title">
-            <strong>FORM PENGAJUAN PEMBAYARAN<br>LEGALITAS PERUSAHAAN <span class="star">*</span></strong>
+            <strong>FORM PENGAJUAN PEMBAYARAN<br>LEGALITAS PERUSAHAAN<span class="star">*</span></strong>
         </div>
         <div class="meta">
             <table>

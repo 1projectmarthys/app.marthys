@@ -7,7 +7,7 @@
     {{-- HEADER --}}
     <div class="flex justify-between items-center mb-6">
         <div>
-            <h2 class="text-2xl font-bold text-gray-900">Daftar Permintaan Anggaran Legal</h2>
+            <h2 class="text-2xl font-bold text-gray-900">Daftarque Permintaan Anggaran Legal</h2>
             <p class="mt-1 text-sm text-gray-500">Kelola semua permintaan Anggaran Legal</p>
         </div>
 
