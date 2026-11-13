@@ -6,7 +6,7 @@
     <div class="flex justify-between items-center mb-6">
         <div>
             <h2 class="text-2xl font-bold text-gray-900">Daftar Permintaan Anggaran HRD</h2>
-            <p class="mt-1 text-sm text-gray-500">Kelola semua permintaan Amggaran HRD</p>
+            <p class="mt-1 text-sm text-gray-500">Kelola semua permintaan Anggaran HRD</p>
         </div>
         <a href="{{ route('anggaranhrd.create') }}"
             class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
